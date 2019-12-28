@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "install": "npm i",
+    "build": "webpack --config ./webpack.config.js -p"
   },
   "author": "Hudson Graham",
   "license": "ISC",
