@@ -1,7 +1,7 @@
 export const links = [
   {
     name: 'Sport',
-    href: '/sport'
+    href: '/people'
   },
   {
     name: 'Racing',
