@@ -10,35 +10,35 @@ export default class Root extends React.Component {
     hasError: false
   }
 
-  componentDidCatch (error, info) {
-    this.setState({hasError: true})
+  componentDidCatch(error, info) {
+    this.setState({ hasError: true })
   }
 
-  render () {
+  render() {
     return (
       <Scoped postcss={styles}>
         {
           this.state.hasError ? (
-            <div className='root navBarHeight'>
+            <div className='navbar navBarHeight'>
               Error
             </div>
           ) : (
-            <div className='root navBarHeight'>
-              {
-                links.map((link) => {
-                  return (
-                    <Link
-                      key={link.href}
-                      className='primary-navigation-link'
-                      to={link.href}
-                    >
-                      {link.name}
-                    </Link>
-                  )
-                })
-              }
-            </div>
-          )
+              <div className='navbar navBarHeight'>
+                {
+                  links.map((link) => {
+                    return (
+                      <Link
+                        key={link.href}
+                        className='primary-navigation-link'
+                        to={link.href}
+                      >
+                        {link.name}
+                      </Link>
+                    )
+                  })
+                }
+              </div>
+            )
         }
       </Scoped>
     )

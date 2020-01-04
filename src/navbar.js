@@ -26,6 +26,14 @@ export const unload = [
   reactLifecycles.unload,
 ]
 
+export const devtools = {
+  overlays: {
+    selectors: [
+      ".navbar",
+    ],
+  }
+}
+
 function domElementGetter() {
   let el = document.getElementById("navbar");
   if (!el) {
